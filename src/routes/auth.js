@@ -60,8 +60,7 @@ router.get("/callback", async (req, res) =>
 
             const userProfile = profileResponse.data;
             console.log(JSON.stringify(userProfile));
-            // Display user profile
-            res.send(`Welcome ${userProfile.name}!`);
+            res.redirect(`/profile?name=${userProfile.name}`);;
         } catch (error)
         {
             console.error(error);

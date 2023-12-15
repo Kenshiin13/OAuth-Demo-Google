@@ -11,5 +11,7 @@ app.listen(process.env.PORT, () =>
 });
 
 const authRouter = require("./routes/auth");
+const profileRouter = require("./routes/profile");
 
 app.use("/auth", authRouter);
+app.use("/profile", profileRouter);
